@@ -24,3 +24,27 @@ collections:
           - { name: status, label: Status, widget: select, default: Published, options: [Published, Forthcoming, In progress] }
           - { name: link, label: Link to web page (optional), widget: string, required: false }
           - { name: pdf, label: PDF file (optional), widget: file, required: false }
+  - name: events
+    label: Events
+    file: data/events.json
+    format: json
+    fields:
+      - name: groups
+        label: Event groups (in display order, e.g. London Climate Action Week 2026)
+        widget: list
+        default: []
+      - name: items
+        label: Events
+        widget: list
+        summary: "{{title}}"
+        fields:
+          - { name: group, label: Group (must match a group name above, or leave blank), widget: string, required: false }
+          - { name: title, label: Title, widget: string }
+          - { name: date, label: Date and venue, widget: string, required: false, hint: "e.g. 24 June 2026, London" }
+          - { name: description, label: Description, widget: text, required: false }
+          - { name: link, label: Link (optional), widget: string, required: false }
+          - { name: link_label, label: Link text (optional), widget: string, required: false, default: "Read more" }
+          - name: photos
+            label: Photos (first one is the cover)
+            widget: list
+            field: { name: image, label: Image, widget: image, media_folder: images, public_folder: /images }
