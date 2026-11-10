@@ -8,30 +8,6 @@
   ],
   "items": [
     {
-      "group": "London Climate Action Week 2026",
-      "title": "Listed Capital for the Global South: Mobilising Institutional Investment in Emerging Market Climate Infrastructure",
-      "date": "24 June 2026, London Climate Action Week, LSE",
-      "year": "2026",
-      "description": "Panel discussion, with the Grantham Research Institute, the Climate and Energy Transition Finance Initiative and Bharat Technology & Impact Accelerator (bharatia).",
-      "link": "",
-      "link_label": "",
-      "photos": [
-        "images/event-listed-capital.jpg"
-      ]
-    },
-    {
-      "group": "London Climate Action Week 2026",
-      "title": "Roundtable: global feeder fund and domestic local-currency fund structures",
-      "date": "London, 2026",
-      "year": "2026",
-      "description": "Closed-door roundtable on structuring a global listed feeder fund and a domestic local-currency fund for climate infrastructure, with bharatia.",
-      "link": "",
-      "link_label": "",
-      "photos": [
-        "images/event-listed-capital-2.jpg"
-      ]
-    },
-    {
       "group": "London Climate Action Week 2025",
       "title": "London Climate Action Week 2025: panel discussion",
       "date": "2025, London",
@@ -89,11 +65,24 @@
       ]
     },
     {
+      "group": "UK pension fund roundtables",
+      "title": "Roundtable: mobilising UK pension capital for transition investment in India",
+      "date": "Date to confirm, London School of Economics",
+      "year": "2026",
+      "description": "Closed-door roundtable hosted with the Foreign, Commonwealth and Development Office (FCDO), the High Commission of India and the LSE Grantham Research Institute, on mobilising UK pension capital for transition investment in India.",
+      "link": "",
+      "link_label": "",
+      "photos": [
+        "images/uk-pension-roundtable-1.jpg",
+        "images/uk-pension-roundtable-2.jpg"
+      ]
+    },
+    {
       "group": "worldsteel Open Forum",
       "title": "worldsteel Climate Action Open Forum 2024",
       "date": "2024, worldsteel Association",
       "year": "2024",
-      "description": "Speaking at the forum.",
+      "description": "Speaker and presenter at the worldsteel Climate Action Open Forum, worldsteel Association, 2024.",
       "link": "",
       "link_label": "",
       "photos": [
@@ -127,10 +116,10 @@
     },
     {
       "group": "",
-      "title": "ET India Net Zero Forum 2026",
+      "title": "ET India Net Zero Forum 2026 (4th edition)",
       "date": "16 June 2026, Hyatt Regency, New Delhi",
       "year": "2026",
-      "description": "Speaker, Policy Fellow (Sustainable Finance, India and ASEAN), LSE Grantham Research Institute.",
+      "description": "Speaker: Policy Fellow (Sustainable Finance, India and ASEAN), LSE Grantham Research Institute on Climate Change and the Environment.",
       "link": "",
       "link_label": "",
       "photos": [
@@ -198,6 +187,130 @@
       "photos": [
         "images/1754561216396.jpg"
       ]
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Workshop on International Industrial Decarbonisation (EU/UK–India, China, Brazil)",
+      "date": "22 June 2026, Chatham House, LSE (9:00–13:00)",
+      "year": "2026",
+      "description": "Workshop on the role of industrial policy and steel decarbonisation, plurilateral and bilateral arrangements, and the role of standards and finance.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Finance for Scaling Climate-Tech Innovation in India: Bridging the Missing Middle",
+      "date": "24 June 2026, SAL.1.05, LSE (11:00–13:00)",
+      "year": "2026",
+      "description": "Closed roundtable with Stride Ventures and Circulus on instruments and platforms for growth-stage climate-tech finance.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Listed Capital for the Global South: Mobilising Institutional Investment in Emerging Market Climate Infrastructure",
+      "date": "24 June 2026, London Climate Action Week, LSE",
+      "year": "2026",
+      "description": "Panel discussion, with the Grantham Research Institute, the Climate and Energy Transition Finance Initiative and Bharat Technology & Impact Accelerator (bharatia).",
+      "link": "",
+      "link_label": "",
+      "photos": [
+        "images/event-listed-capital.jpg"
+      ]
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Roundtable: global feeder fund and domestic local-currency fund structures",
+      "date": "2026, London",
+      "year": "2026",
+      "description": "Closed-door roundtable on structuring a global listed feeder fund and a domestic local-currency fund for climate infrastructure, with bharatia.",
+      "link": "",
+      "link_label": "",
+      "photos": [
+        "images/event-listed-capital-2.jpg"
+      ]
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Unlocking Institutional Capital for EMDEs and India",
+      "date": "24 June 2026, Vera Anstey Room, LSE (14:00–16:30)",
+      "year": "2026",
+      "description": "Roundtable with bharatia, CCF and TNGCF on instruments and platforms that focus on UK and EU institutional capital.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "EMDE–India Climate and Sustainability Drinks",
+      "date": "24 June 2026, Marshall Building, 8th floor, LSE (17:00–20:00)",
+      "year": "2026",
+      "description": "Drinks reception with the Centre for Climate Finance (CCF) and Energiva, with special remarks by Lord Prof Nick Stern and Mr Amitabh Kant.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Public lecture: Smarter Than the Storm",
+      "date": "24 June 2026, Hong Kong Theatre, LSE (18:30–20:00)",
+      "year": "2026",
+      "description": "Public lecture and global book launch: Amitabh Kant and Siddharth Sinha on how AI, policy and innovation can help societies anticipate, manage and respond to climate risk.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Advancing Green Growth: Lessons to and from Indian States",
+      "date": "25 June 2026, The Box, LSE (15:00–17:30)",
+      "year": "2026",
+      "description": "Roundtable with Indian subnational entities and other Global South economies on sustainable, low-carbon development, with LSE CETEx and Energiva.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Panel sessions on Innovative Finance Solutions for India",
+      "date": "26 June 2026, Shaw Library, LSE (09:00–12:00)",
+      "year": "2026",
+      "description": "Series of panel discussions and fireside chats with Indian LPs and stakeholders from the UK and EU, with LSE and IIC India, and partners Impact Investing Institute and EMIA.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Launch: ORF High Level Empowered Board on Green Transition",
+      "date": "26 June 2026, SAL.1.05, LSE (10:00–12:00)",
+      "year": "2026",
+      "description": "In-person, closed-door launch and board meeting of the ORF High Level Empowered Board on Green Transition, with LSE and ORF.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "High Level Panel: Scaling the Green Transition",
+      "date": "26 June 2026, Shaw Library, LSE (13:30–14:30)",
+      "year": "2026",
+      "description": "High-level panel with Lord Prof Nick Stern, Rachel Kyte, André Corrêa do Lago and Masood Ahmed.",
+      "link": "",
+      "link_label": "",
+      "photos": []
+    },
+    {
+      "group": "London Climate Action Week 2026",
+      "title": "Scaling Blended Climate Finance for India: catalytic equity, FX solutions and securitisation",
+      "date": "26 June 2026, Vera Anstey Room, LSE (14:30–17:30)",
+      "year": "2026",
+      "description": "Practitioner workshop on catalytic equity, guarantees and FX hedging for India.",
+      "link": "",
+      "link_label": "",
+      "photos": []
     }
   ]
 }
