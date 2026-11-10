@@ -1,6 +1,8 @@
 // Loads data/publications.json and renders it.
-// [data-publications] shows every item grouped by type.
-// [data-latest] shows the first few items as a short teaser on the home page.
+// Attributes on a container:
+//   data-list="Type A,Type B"  types to show (omit for all)
+//   data-limit="3"             optional maximum number of items
+// Items are shown newest first.
 (function () {
   function renderItem(item) {
     var li = document.createElement("li");
@@ -45,43 +47,30 @@
     return li;
   }
 
-  function renderGrouped(container, items) {
-    container.innerHTML = "";
-    if (!items.length) {
-      container.innerHTML = '<p class="empty">No publications listed yet.</p>';
-      return;
-    }
-    var groups = [];
-    var byType = {};
-    items.forEach(function (item) {
-      var t = item.type || "Other";
-      if (!byType[t]) {
-        byType[t] = [];
-        groups.push(t);
-      }
-      byType[t].push(item);
+  function select(items, typesAttr, limitAttr) {
+    var types = typesAttr
+      ? typesAttr.split(",").map(function (t) { return t.trim(); })
+      : null;
+    var chosen = items.filter(function (i) {
+      return !types || types.indexOf(i.type) !== -1;
     });
-    groups.forEach(function (t) {
-      var h = document.createElement("h2");
-      h.textContent = t;
-      container.appendChild(h);
-      var list = document.createElement("ul");
-      list.className = "pub-list";
-      byType[t].forEach(function (item) { list.appendChild(renderItem(item)); });
-      container.appendChild(list);
+    chosen.sort(function (a, b) {
+      return (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0);
     });
+    var limit = parseInt(limitAttr, 10);
+    return limit ? chosen.slice(0, limit) : chosen;
   }
 
-  function renderLatest(container, items, limit) {
+  function render(container, items) {
     container.innerHTML = "";
-    var shown = items.slice(0, limit);
-    if (!shown.length) {
-      container.innerHTML = '<p class="empty">No publications listed yet.</p>';
+    var chosen = select(items, container.getAttribute("data-list"), container.getAttribute("data-limit"));
+    if (!chosen.length) {
+      container.innerHTML = '<p class="empty">Nothing listed yet.</p>';
       return;
     }
     var list = document.createElement("ul");
     list.className = "pub-list";
-    shown.forEach(function (item) { list.appendChild(renderItem(item)); });
+    chosen.forEach(function (item) { list.appendChild(renderItem(item)); });
     container.appendChild(list);
   }
 
@@ -89,16 +78,13 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       var items = (data && data.items) || [];
-      document.querySelectorAll("[data-publications]").forEach(function (el) {
-        renderGrouped(el, items);
-      });
-      document.querySelectorAll("[data-latest]").forEach(function (el) {
-        renderLatest(el, items, 3);
+      document.querySelectorAll("[data-list]").forEach(function (el) {
+        render(el, items);
       });
     })
     .catch(function () {
-      document.querySelectorAll("[data-publications],[data-latest]").forEach(function (el) {
-        el.innerHTML = '<p class="empty">Publications could not be loaded.</p>';
+      document.querySelectorAll("[data-list]").forEach(function (el) {
+        el.innerHTML = '<p class="empty">The list could not be loaded.</p>';
       });
     });
 })();
