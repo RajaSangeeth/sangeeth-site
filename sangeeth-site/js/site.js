@@ -1,5 +1,6 @@
-// Loads data/publications.json and renders it into any element marked
-// data-publications (full list) or data-latest (short teaser on the home page).
+// Loads data/publications.json and renders it.
+// [data-publications] shows every item grouped by type.
+// [data-latest] shows the first few items as a short teaser on the home page.
 (function () {
   function renderItem(item) {
     var li = document.createElement("li");
@@ -7,13 +8,14 @@
     var title = document.createElement("div");
     title.className = "pub-title";
     title.textContent = item.title || "Untitled";
-    if (item.status && item.status !== "Published") {
-      var badge = document.createElement("span");
-      badge.className = "badge";
-      badge.textContent = item.status;
-      title.appendChild(badge);
-    }
     li.appendChild(title);
+
+    if (item.authors) {
+      var authors = document.createElement("div");
+      authors.className = "pub-authors";
+      authors.textContent = item.authors;
+      li.appendChild(authors);
+    }
 
     var meta = document.createElement("div");
     meta.className = "pub-meta";
@@ -43,17 +45,44 @@
     return li;
   }
 
-  function render(container, items, limit) {
+  function renderGrouped(container, items) {
+    container.innerHTML = "";
+    if (!items.length) {
+      container.innerHTML = '<p class="empty">No publications listed yet.</p>';
+      return;
+    }
+    var groups = [];
+    var byType = {};
+    items.forEach(function (item) {
+      var t = item.type || "Other";
+      if (!byType[t]) {
+        byType[t] = [];
+        groups.push(t);
+      }
+      byType[t].push(item);
+    });
+    groups.forEach(function (t) {
+      var h = document.createElement("h2");
+      h.textContent = t;
+      container.appendChild(h);
+      var list = document.createElement("ul");
+      list.className = "pub-list";
+      byType[t].forEach(function (item) { list.appendChild(renderItem(item)); });
+      container.appendChild(list);
+    });
+  }
+
+  function renderLatest(container, items, limit) {
+    container.innerHTML = "";
+    var shown = items.slice(0, limit);
+    if (!shown.length) {
+      container.innerHTML = '<p class="empty">No publications listed yet.</p>';
+      return;
+    }
     var list = document.createElement("ul");
     list.className = "pub-list";
-    var shown = limit ? items.slice(0, limit) : items;
     shown.forEach(function (item) { list.appendChild(renderItem(item)); });
-    container.innerHTML = "";
-    if (shown.length) {
-      container.appendChild(list);
-    } else {
-      container.innerHTML = '<p class="empty">No publications listed yet.</p>';
-    }
+    container.appendChild(list);
   }
 
   fetch("data/publications.json", { cache: "no-cache" })
@@ -61,10 +90,10 @@
     .then(function (data) {
       var items = (data && data.items) || [];
       document.querySelectorAll("[data-publications]").forEach(function (el) {
-        render(el, items);
+        renderGrouped(el, items);
       });
       document.querySelectorAll("[data-latest]").forEach(function (el) {
-        render(el, items, 3);
+        renderLatest(el, items, 3);
       });
     })
     .catch(function () {

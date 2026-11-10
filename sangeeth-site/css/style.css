@@ -121,6 +121,13 @@ p { margin: 0 0 16px; }
 }
 
 .pub-title { font-weight: 600; color: var(--ink); }
+.pub-authors { color: var(--muted); font-size: 0.95rem; }
+.events { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.event { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; border-bottom: 1px solid var(--rule); padding-bottom: 18px; }
+.event img { width: 240px; max-width: 100%; border-radius: 4px; }
+.event-text { flex: 1; min-width: 240px; }
+.video { position: relative; padding-top: 56.25%; margin: 8px 0 16px; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 4px; }
 .pub-meta { color: var(--muted); font-size: 0.92rem; }
 .pub-actions a { margin-right: 12px; font-size: 0.92rem; }
 

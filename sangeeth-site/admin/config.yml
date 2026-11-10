@@ -16,9 +16,11 @@ collections:
         widget: list
         summary: "{{title}}"
         fields:
+          - { name: type, label: Section, widget: select, default: Policy reports and briefs, options: [Policy reports and briefs, Climate Catalyst case studies, Commentary and articles, In the news] }
           - { name: title, label: Title, widget: string }
+          - { name: authors, label: Co-authors or note, widget: string, required: false }
           - { name: year, label: Year, widget: string }
-          - { name: venue, label: Venue, widget: string, required: false }
+          - { name: venue, label: Venue or publisher, widget: string, required: false }
           - { name: status, label: Status, widget: select, default: Published, options: [Published, Forthcoming, In progress] }
-          - { name: link, label: Link (web page, optional), widget: string, required: false }
-          - { name: pdf, label: PDF file (optional), widget: file, required: false, allow_multiple: false }
+          - { name: link, label: Link to web page (optional), widget: string, required: false }
+          - { name: pdf, label: PDF file (optional), widget: file, required: false }
