@@ -2,6 +2,7 @@
 // Attributes on a container:
 //   data-list="Type A,Type B"  types to show (omit for all)
 //   data-limit="3"             optional maximum number of items
+//   data-topic="Topic name"    optional research topic (matches item.topic)
 // Items are shown newest first.
 (function () {
   function renderItem(item) {
@@ -47,12 +48,13 @@
     return li;
   }
 
-  function select(items, typesAttr, limitAttr) {
+  function select(items, typesAttr, limitAttr, topic) {
     var types = typesAttr
       ? typesAttr.split(",").map(function (t) { return t.trim(); })
       : null;
     var chosen = items.filter(function (i) {
-      return !types || types.indexOf(i.type) !== -1;
+      return (!types || types.indexOf(i.type) !== -1) &&
+             (!topic || i.topic === topic);
     });
     chosen.sort(function (a, b) {
       return (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0);
@@ -63,7 +65,7 @@
 
   function render(container, items) {
     container.innerHTML = "";
-    var chosen = select(items, container.getAttribute("data-list"), container.getAttribute("data-limit"));
+    var chosen = select(items, container.getAttribute("data-list"), container.getAttribute("data-limit"), container.getAttribute("data-topic"));
     if (!chosen.length) {
       container.innerHTML = '<p class="empty">Nothing listed yet.</p>';
       return;
