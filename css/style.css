@@ -1,10 +1,11 @@
 :root {
-  --ink: #1d2433;
-  --muted: #5b6375;
-  --accent: #1f4e79;
-  --rule: #d9dde6;
+  --ink: #12302f;
+  --muted: #4d6b69;
+  --accent: #0f7b7a;
+  --accent-dark: #0a5c5b;
+  --rule: #cfe6e4;
   --bg: #ffffff;
-  --soft: #f5f6f9;
+  --soft: #e7f5f4;
   --serif: Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -29,14 +30,14 @@ a { color: var(--accent); }
 }
 
 header.site {
-  border-bottom: 1px solid var(--rule);
-  padding: 20px 0 12px;
+  background: var(--accent);
+  padding: 22px 0 10px;
 }
 
 .site-name {
   font-family: var(--serif);
-  font-size: 1.5rem;
-  color: var(--ink);
+  font-size: 1.6rem;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -48,7 +49,7 @@ nav.tabs {
 }
 
 nav.tabs a {
-  color: var(--muted);
+  color: #d4efec;
   text-decoration: none;
   padding: 6px 0;
   border-bottom: 2px solid transparent;
@@ -56,9 +57,20 @@ nav.tabs a {
 
 nav.tabs a.active,
 nav.tabs a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
+
+.hero {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #ffffff;
+  padding: 40px 0;
+  margin-bottom: 32px;
+}
+
+.hero h1 { color: #ffffff; }
+.hero .lede { color: #d4efec; }
+.hero a { color: #ffffff; }
 
 main { padding: 32px 0 48px; }
 
