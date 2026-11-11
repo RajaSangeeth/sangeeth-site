@@ -60,7 +60,7 @@ header { display: flex; flex-direction: column; gap: 22px; }
 .name a { color: inherit; text-decoration: none; }
 .title-line { margin: 6px 0 0; color: var(--muted); font-size: 0.98rem; }
 nav { border-block: 1px solid var(--rule); }
-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 28px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 20px; }
 nav a {
   display: inline-block; padding-block: 11px;
   font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em;
@@ -168,15 +168,9 @@ h2 {
 .gallery-poster img, .gallery-poster a:first-child img { aspect-ratio: auto; }
 .gallery-3 { grid-template-columns: minmax(0, 1fr); } }
 
-/* Sub-tabs (Media) */
-.subnav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.subnav a {
   display: inline-block; padding: 6px 14px; border: 1px solid var(--rule); border-radius: 999px;
   font-size: 0.85rem; color: var(--muted); text-decoration: none; background: transparent;
 }
-.subnav a:hover { color: var(--fg); border-color: var(--muted); }
-.subnav a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
-.subview { display: flex; flex-direction: column; gap: 16px; }
 .intro-note { margin: 0; color: var(--muted); font-size: 0.95rem; max-width: 66ch; }
 .empty-unused {
   border: 1px dashed var(--rule); border-radius: 4px; padding: 28px 20px; text-align: center;
@@ -216,7 +210,8 @@ footer a { color: var(--muted); }
         <li><a href="#about" data-view="about">About</a></li>
         <li><a href="#research" data-view="research">Research</a></li>
         <li><a href="#publications" data-view="publications">Publications</a></li>
-        <li><a href="#media" data-view="media">Media</a></li>
+        <li><a href="#writing" data-view="writing">Op-eds &amp; articles</a></li>
+        <li><a href="#audiovisual" data-view="audiovisual">Audio-visual</a></li>
         <li><a href="#events" data-view="events">Events</a></li>
         <li><a href="#contact" data-view="contact">Contact</a></li>
       </ul>
@@ -318,7 +313,7 @@ footer a { color: var(--muted); }
             </div>
           </li>
         </ul>
-        <p class="more"><a href="#publications">All publications</a> · <a href="#media">Media</a></p>
+        <p class="more"><a href="#publications">All publications</a> · <a href="#writing">Op-eds &amp; articles</a></p>
       </section>
     </div>
 
@@ -424,20 +419,12 @@ footer a { color: var(--muted); }
       </section>
     </div>
 
-    <!-- MEDIA -->
-    <div class="view" id="v-media" hidden>
-      <section aria-labelledby="h-media">
-        <h2 id="h-media">Media</h2>
-        <ul class="subnav" aria-label="Media sections">
-          <li><a href="#media-opeds" data-sub="opeds">Op-eds</a></li>
-          <li><a href="#media-articles" data-sub="articles">Articles</a></li>
-          <li><a href="#media-audiovisual" data-sub="audiovisual">Audio-visual</a></li>
-          <li><a href="#media-press" data-sub="press">In the press</a></li>
-        </ul>
-
-        <div class="subview" id="s-opeds">
-          <p class="intro-note">Opinion pieces in newspapers and magazines.</p>
-        <div class="pubs">
+    <!-- OP-EDS AND ARTICLES -->
+    <div class="view" id="v-writing" hidden>
+      <section aria-labelledby="h-opeds">
+        <h2 id="h-opeds">Op-eds</h2>
+        <p class="intro-note">Opinion pieces in newspapers and magazines.</p>
+<div class="pubs">
           <div class="pub-year">
             <p>‘Navigating Europe’s regulatory maze’ (with Prachi Priya), <em>Business Standard</em>, 2026. <a href="https://www.business-standard.com/opinion/columns/navigating-europe-s-regulatory-maze-126102201677_1.html" target="_blank" rel="noopener">Read</a> <a href="media/2026-business-standard-europes-regulatory-maze.jpg" target="_blank" rel="noopener">View print clipping</a></p>
             <p>‘India is fighting CBAM. It should also help shape the rules’ (with Jesse Scott), <em>Mint</em>, 2026. <a href="https://www.lse.ac.uk/granthaminstitute/news/india-if-fighting-cbam-it-should-also-help-shape-the-rules/" target="_blank" rel="noopener">Read</a></p>
@@ -459,11 +446,11 @@ footer a { color: var(--muted); }
             <p>‘Port Talbot shows the need for a just transition to net zero’ (with Nick Robins), <em>British Politics and Policy at LSE</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/port-talbot-shows-the-need-for-a-just-transition-to-net-zero/" target="_blank" rel="noopener">Read</a></p>
           </div>
         </div>
-        </div>
-
-        <div class="subview" id="s-articles" hidden>
-          <p class="intro-note">Commentaries published by the Grantham Research Institute.</p>
-        <div class="pubs">
+      </section>
+      <section aria-labelledby="h-articles">
+        <h2 id="h-articles">Articles</h2>
+        <p class="intro-note">Commentaries and shorter analytical pieces.</p>
+<div class="pubs">
           <div class="pub-year">
             <p>‘What the EU’s new steel regime means for India: smaller quotas, a higher penalty and a carbon price’ (with Jesse Scott), <em>Commentary, Grantham Research Institute</em>, 2026. <a href="https://www.lse.ac.uk/granthaminstitute/news/smaller-quotas-a-higher-penalty-and-a-carbon-price-what-the-eus-new-steel-regime-means-for-india/" target="_blank" rel="noopener">Read</a></p>
             <p>‘Rethinking the rush to regulate ESG rating providers’ (with Deepak Kumar, Gourishankar S Hiremath and Jitendra Mahakud), <em>Commentary, Grantham Research Institute</em>, 2026. <a href="https://www.lse.ac.uk/granthaminstitute/news/rethinking-the-rush-to-regulate-esg-rating-providers/" target="_blank" rel="noopener">Read</a></p>
@@ -479,24 +466,11 @@ footer a { color: var(--muted); }
             <p>‘From just transition pledges to practice: companies under the CA100+ microscope’ (with Shafaq Ashraf and Antonina Scheer), <em>Commentary, Grantham Research Institute</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/from-just-transition-pledges-to-practice-companies-under-the-ca100-microscope/" target="_blank" rel="noopener">Read</a></p>
           </div>
         </div>
-        </div>
-
-        <div class="subview" id="s-audiovisual" hidden>
-          <p class="intro-note">Radio, television and podcast appearances.</p>
-        <div class="pubs">
-          <div class="pub-year">
-            <p>‘The true cost of climate change’, <em>Podcast</em>, 2025. <a href="https://www.lse.ac.uk/granthaminstitute/news/the-true-cost-of-climate-change/" target="_blank" rel="noopener">Listen</a></p>
-          </div>
-          <div class="pub-year">
-            <p>‘COP29 and climate finance’, <em>BBC Radio 5, interview</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/bbc-radio-5-interview/" target="_blank" rel="noopener">Listen</a></p>
-            <p>‘Why climate does (not) matter in Indian elections’, <em>DW News, television report</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/why-climate-does-not-matter-in-indian-elections/" target="_blank" rel="noopener">Watch</a></p>
-            <p>‘Climate policy in focus across 65 elections worldwide’ (with Leo Mercer), <em>Radio New Zealand</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/climate-policy-in-focus-across-65-elections-worldwide/" target="_blank" rel="noopener">Listen</a></p>
-          </div>
-        </div>
-        </div>
-        <div class="subview" id="s-press" hidden>
-          <p class="intro-note">Coverage quoting or citing my work.</p>
-        <div class="pubs">
+      </section>
+      <section aria-labelledby="h-press">
+        <h2 id="h-press">In the press</h2>
+        <p class="intro-note">Coverage quoting or citing my work.</p>
+<div class="pubs">
           <div class="pub-year">
             <p>‘CBAM costs for Indian steelmakers unlikely to be as high as first feared’, <em>edie</em>, 2026. <a href="https://www.lse.ac.uk/granthaminstitute/news/cbam-costs-for-indian-steelmakers-unlikely-to-be-as-high-as-first-feared/" target="_blank" rel="noopener">Read</a></p>
           </div>
@@ -513,6 +487,23 @@ footer a { color: var(--muted); }
             <p>‘Nerves of steel’, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/nerves-of-steel/" target="_blank" rel="noopener">Read</a></p>
           </div>
         </div>
+      </section>
+    </div>
+
+    <!-- AUDIO-VISUAL -->
+    <div class="view" id="v-audiovisual" hidden>
+      <section aria-labelledby="h-av">
+        <h2 id="h-av">Audio-visual media</h2>
+        <p class="intro-note">Radio, television and podcast appearances.</p>
+<div class="pubs">
+          <div class="pub-year">
+            <p>‘The true cost of climate change’, <em>Podcast</em>, 2025. <a href="https://www.lse.ac.uk/granthaminstitute/news/the-true-cost-of-climate-change/" target="_blank" rel="noopener">Listen</a></p>
+          </div>
+          <div class="pub-year">
+            <p>‘COP29 and climate finance’, <em>BBC Radio 5, interview</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/bbc-radio-5-interview/" target="_blank" rel="noopener">Listen</a></p>
+            <p>‘Why climate does (not) matter in Indian elections’, <em>DW News, television report</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/why-climate-does-not-matter-in-indian-elections/" target="_blank" rel="noopener">Watch</a></p>
+            <p>‘Climate policy in focus across 65 elections worldwide’ (with Leo Mercer), <em>Radio New Zealand</em>, 2024. <a href="https://www.lse.ac.uk/granthaminstitute/news/climate-policy-in-focus-across-65-elections-worldwide/" target="_blank" rel="noopener">Listen</a></p>
+          </div>
         </div>
       </section>
     </div>
@@ -648,14 +639,12 @@ footer a { color: var(--muted); }
 
 <script>
 (function () {
-  var views = ["home", "about", "research", "publications", "media", "events", "contact"];
-  var subs = ["opeds", "articles", "audiovisual", "press"];
+  var views = ["home", "about", "research", "publications", "writing", "audiovisual", "events", "contact"];
+  var legacy = { "media": "writing", "media-opeds": "writing", "media-articles": "writing", "media-press": "writing", "media-audiovisual": "audiovisual" };
   function show() {
-    var h = (location.hash || "#home").slice(1);
-    var v = h, sub = null;
-    if (h.indexOf("media-") === 0) { v = "media"; sub = h.slice(6); }
+    var v = (location.hash || "#home").slice(1);
+    if (legacy[v]) v = legacy[v];
     if (views.indexOf(v) === -1) v = "home";
-    if (v === "media" && subs.indexOf(sub) === -1) sub = "opeds";
     views.forEach(function (name) {
       document.getElementById("v-" + name).hidden = name !== v;
     });
@@ -663,13 +652,6 @@ footer a { color: var(--muted); }
       if (a.dataset.view === v) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     });
-    if (v === "media") {
-      subs.forEach(function (name) { document.getElementById("s-" + name).hidden = name !== sub; });
-      document.querySelectorAll(".subnav a").forEach(function (a) {
-        if (a.dataset.sub === sub) a.setAttribute("aria-current", "page");
-        else a.removeAttribute("aria-current");
-      });
-    }
     window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", show);
