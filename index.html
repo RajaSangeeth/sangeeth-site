@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sangeeth Selvaraju</title>
-<meta name="description" content="Sangeeth Selvaraju, Policy Fellow at the Grantham Research Institute and CETEx, LSE. Research, publications and media on financing industrial decarbonisation in India and emerging markets.">
+<meta name="description" content="Sangeeth Selvaraju, Policy Fellow at the London School of Economics. Research, publications and media on financing industrial decarbonisation in India and emerging markets.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -25,22 +25,13 @@ img{max-width:100%}
   --fg: #1b2228;
   --muted: #5d6973;
   --rule: #dde3e8;
-  --accent: #2d5674;      /* tempered steel blue */
-  --accent-soft: #e8eff5;
+  --accent: #1f6f6b;      /* teal */
+  --accent-soft: #e4f0ef;
   /* Brown TT for headings and navigation, Helvetica for everything else */
   --serif: "Brown TT", "Brown", "BrownLL", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #12171b; --fg: #e4e9ed; --muted: #95a2ad; --rule: #2a333a;
-    --accent: #8fb6d4; --accent-soft: #1c2832; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #12171b; --fg: #e4e9ed; --muted: #95a2ad; --rule: #2a333a;
-  --accent: #8fb6d4; --accent-soft: #1c2832; color-scheme: dark;
+  color-scheme: light;
 }
 
 body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
@@ -98,7 +89,7 @@ h2 {
 .theme { max-width: 80ch; }
 .subthemes { margin: 10px 0 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 4px; font-size: 0.95rem; }
 .theme h3 { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; margin: 0 0 6px; line-height: 1.3; }
-.theme p { margin: 0; font-size: 0.97rem; }
+.theme p { margin: 0 0 10px; font-size: 0.97rem; }
 .route { margin-top: 10px; display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
 .route span { background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 3px; }
 
@@ -158,15 +149,19 @@ h2 {
 .clipping figcaption { font-family: var(--sans); font-size: 0.98rem; color: var(--muted); max-width: 80ch; }
 
 /* Nature photography strip */
-.nature-strip {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+/* Page banner: a landscape photo heading each section */
+.page-banner { margin: 0 0 4px -24px; position: relative; overflow: hidden; border-radius: 0 3px 3px 0; }
+.page-banner img { display: block; width: calc(100% + 24px); height: 170px; object-fit: cover; }
+.page-banner::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
 }
-.nature-strip img {
-  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.nature-strip img:hover { transform: scale(1.02); }
-@media (max-width: 640px) { .nature-strip { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .page-banner { margin-left: 0; border-radius: 3px; } .page-banner img { width: 100%; height: 120px; } }
+
+/* Contact page banner */
+.contact-banner { margin: 0 0 4px -24px; }
+.contact-banner img { display: block; width: calc(100% + 24px); height: 200px; object-fit: cover; }
+@media (max-width: 640px) { .contact-banner { margin-left: 0; } .contact-banner img { width: 100%; height: 140px; } }
 
 /* Events */
 .event { display: flex; flex-direction: column; gap: 6px; padding-bottom: 28px; border-bottom: 1px solid var(--rule); }
@@ -198,11 +193,6 @@ h2 {
 }
 .empty strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.05rem; color: var(--fg); margin-bottom: 4px; }
 
-/* Contact banner */
-.contact-banner { margin: 0 -24px 0 -24px; }
-.contact-banner img { display: block; width: 100%; height: 200px; object-fit: cover; border-radius: 0; }
-@media (max-width: 640px) { .contact-banner { margin: 0; } .contact-banner img { height: 140px; } }
-
 footer { border-top: 1px solid var(--rule); margin-left: -24px; padding-left: 24px; padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 0.8rem; }
 footer a { color: var(--muted); }
 
@@ -228,7 +218,7 @@ footer a { color: var(--muted); }
   <header>
     <div>
       <h1 class="name"><a href="#home">Sangeeth Selvaraju</a></h1>
-      <p class="title-line">Policy Fellow, Grantham Research Institute and CETEx, London School of Economics</p>
+      <p class="title-line">London School of Economics</p>
     </div>
     <nav aria-label="Pages">
       <ul>
@@ -252,7 +242,7 @@ footer a { color: var(--muted); }
           <div class="portrait" role="img" aria-label="Portrait placeholder">SS</div>
           <div class="prose">
             <p class="lede">How heavy industry in emerging markets gets the capital it needs to decarbonise, with a focus on steel in India.</p>
-            <p>Sangeeth Selvaraju is a Policy Fellow at the Grantham Research Institute on Climate Change and the Environment and the Centre for Economic Transition Expertise (CETEx) at LSE. His work covers the cost of low-carbon steel capacity, the trade measures reshaping Indian exports, and the institutional capital that could finance the transition. <a href="#about">More about me</a></p>
+            <p>Sangeeth Selvaraju is a Policy Fellow at the London School of Economics, affiliated with the Grantham Research Institute on Climate Change and the Environment and the Global School of Sustainability. His work covers private capital mobilisation, the cost of low-carbon steel capacity, the trade measures reshaping Indian exports, and the institutional capital that could finance the transition. <a href="#about">More about me</a></p>
             <ul class="profiles">
               <li><a href="https://www.lse.ac.uk/granthaminstitute/profile/sangeeth-raja/" target="_blank" rel="noopener">Grantham profile</a></li>
               <li><a href="https://cetex.org/team/sangeeth-selvaraju/" target="_blank" rel="noopener">CETEx profile</a></li>
@@ -292,10 +282,6 @@ footer a { color: var(--muted); }
               <figcaption>Lord Nicholas Stern at NITI Aayog, New Delhi</figcaption>
             </figure>
             <figure class="slide" hidden>
-              <img src="media/home/08-niti-aayog-stern-book.jpg" alt="Sanjeet Singh and Lord Nicholas Stern with ‘The Growth Story of the 21st Century’, NITI Aayog" loading="lazy">
-              <figcaption>Sanjeet Singh and Lord Nicholas Stern with ‘The Growth Story of the 21st Century’, NITI Aayog</figcaption>
-            </figure>
-            <figure class="slide" hidden>
               <img src="media/home/09-india-convening-plenary.jpg" alt="Moderating Plenary 1, ‘Emerging Impact Investing Opportunities for British Capital in India’, The India Convening, LSE, 26 June 2026" loading="lazy">
               <figcaption>Moderating Plenary 1, ‘Emerging Impact Investing Opportunities for British Capital in India’, The India Convening, LSE, 26 June 2026</figcaption>
             </figure>
@@ -311,7 +297,6 @@ footer a { color: var(--muted); }
             <button type="button" class="dot" aria-label="Show photo 6"></button>
             <button type="button" class="dot" aria-label="Show photo 7"></button>
             <button type="button" class="dot" aria-label="Show photo 8"></button>
-            <button type="button" class="dot" aria-label="Show photo 9"></button>
         </div>
       </section>
       <section aria-labelledby="h-feature">
@@ -345,10 +330,11 @@ footer a { color: var(--muted); }
 
     <!-- ABOUT -->
     <div class="view" id="v-about" hidden>
+      <figure class="page-banner"><img src="media/nature/ladakh-mountains.jpg" alt="Sunset over Ladakh" loading="lazy"></figure>
       <section aria-labelledby="h-bio">
         <h2 id="h-bio">About</h2>
         <div class="prose">
-          <p>Sangeeth Selvaraju is a Policy Fellow at the London School of Economics, affiliated with the Grantham Research Institute on Climate Change and the Environment and the Centre for Economic Transition Expertise (CETEx). His research focuses on the financing of industrial decarbonisation, particularly steel in India and other emerging markets.</p>
+          <p>Sangeeth Selvaraju is a Policy Fellow at the London School of Economics, affiliated with the Grantham Research Institute on Climate Change and the Environment and the Global School of Sustainability. His research focuses on private capital mobilisation and the financing of industrial decarbonisation, particularly steel in India and other emerging markets.</p>
           <p>His work sits between climate policy and finance. He studies capital costs and investment pipelines in Indian steel, how the EU’s Carbon Border Adjustment Mechanism and steel safeguard quotas affect Indian exporters, and how domestic and European institutional investors, national development banks and blended finance structures can support transition investment in emerging and developing economies.</p>
           <p>Before joining LSE, he worked in investment banking at Moelis &amp; Company and in cleantech advisory at Apricum. He has held research roles at the Mercator Research Institute, the Council on Energy, Environment and Water in New Delhi, and DIW Berlin, where he led multi-country climate finance and NDC work across India, Indonesia, South Africa and Brazil.</p>
         </div>
@@ -356,7 +342,7 @@ footer a { color: var(--muted); }
       <section aria-labelledby="h-exp">
         <h2 id="h-exp">Experience</h2>
         <ul class="cv">
-          <li><span class="org">London School of Economics</span><span class="what">Policy Fellow, Grantham Research Institute and CETEx</span></li>
+          <li><span class="org">London School of Economics</span><span class="what">Policy Fellow, Grantham Research Institute and Global School of Sustainability</span></li>
           <li><span class="org">DIW Berlin</span><span class="what">Climate finance and NDCs</span></li>
           <li><span class="org">Mercator Research Institute</span><span class="what">Research</span></li>
           <li><span class="org">Council on Energy, Environment and Water</span><span class="what">Research, New Delhi</span></li>
@@ -364,39 +350,34 @@ footer a { color: var(--muted); }
           <li><span class="org">Moelis &amp; Company</span><span class="what">Investment banking</span></li>
         </ul>
       </section>
-      <div class="nature-strip" aria-label="Photography">
-          <a href="media/nature/pangong-lake.jpg" target="_blank" rel="noopener"><img src="media/nature/pangong-lake.jpg" alt="Pangong Lake, Ladakh" loading="lazy"></a>
-          <a href="media/nature/ladakh-mountains.jpg" target="_blank" rel="noopener"><img src="media/nature/ladakh-mountains.jpg" alt="Sunset over Ladakh" loading="lazy"></a>
-          <a href="media/nature/glacier-through-tree.jpg" target="_blank" rel="noopener"><img src="media/nature/glacier-through-tree.jpg" alt="Glacier through birch, Kashmir" loading="lazy"></a>
-          <a href="media/nature/caribbean-beach.jpg" target="_blank" rel="noopener"><img src="media/nature/caribbean-beach.jpg" alt="Caribbean coast" loading="lazy"></a>
-          <a href="media/nature/sunset-sea.jpg" target="_blank" rel="noopener"><img src="media/nature/sunset-sea.jpg" alt="Sunset at sea" loading="lazy"></a>
-          <a href="media/nature/stone-bridge-river.jpg" target="_blank" rel="noopener"><img src="media/nature/stone-bridge-river.jpg" alt="Stone bridge, English countryside" loading="lazy"></a>
-      </div>
     </div>
 
     <!-- RESEARCH -->
     <div class="view" id="v-research" hidden>
+      <figure class="page-banner"><img src="media/nature/glacier-through-tree.jpg" alt="Glacier seen through birch bark, Kashmir" loading="lazy"></figure>
       <section aria-labelledby="h-research">
         <h2 id="h-research">Research areas</h2>
         <div class="themes">
           <div class="theme">
             <h3>Institutional capital for the transition</h3>
-            <p>Mobilising domestic and global pension funds, insurers and sovereign wealth funds for transitions in emerging markets and developing economies (EMDEs), and research on the enabling environment, including national and multilateral development banks and the wider finance ecosystem. This covers:</p>
+            <p>Emerging markets and developing economies need far more private capital than they currently attract. This strand looks at what would move domestic and global pension funds, insurers and sovereign wealth funds into transition assets at scale, and at the enabling environment around them: regulation, risk perception, the pipeline of investable projects, and the roles of national and multilateral development banks within the wider finance ecosystem. It runs across several related questions:</p>
             <ul class="subthemes">
-              <li>Instruments, including bonds</li>
-              <li>Structuring of investment products, with case studies</li>
-              <li>Blended finance and the role it can play</li>
-              <li>The cost of capital</li>
-              <li>Development finance and currency risk: national development banks, blended finance tranching, and the cost of hard-currency debt for climate-vulnerable countries</li>
+              <li><strong>Instruments.</strong> Transition bonds, sustainability-linked debt and other listed instruments, including what use-of-proceeds frameworks actually deliver and where labelling adds little.</li>
+              <li><strong>Structuring and products.</strong> How investment vehicles are put together in practice, from listed feeder funds and local-currency structures to securitisation, examined through case studies of what has and has not worked.</li>
+              <li><strong>Blended finance.</strong> Where concessional and catalytic capital genuinely crowds in private money, how junior tranches should be sized, and when blending is the wrong tool.</li>
+              <li><strong>The cost of capital.</strong> Why financing costs for the same technology differ so widely across countries, what drives the spread, and which interventions actually narrow it.</li>
+              <li><strong>Development finance and currency risk.</strong> National development banks, hard-currency debt in climate-vulnerable economies, currency conversion clauses, and the foreign exchange solutions that determine whether projects clear investment committees.</li>
             </ul>
           </div>
           <div class="theme">
-            <h3>The EU–India free trade agreement</h3>
-            <p>Win–win opportunities and investment in clean technology between the EU and India.</p>
+            <h3>The EU–India relationship</h3>
+            <p>The EU–India free trade agreement opens a set of win–win opportunities in clean technology: manufacturing supply chains, investment flows and technology partnerships that serve industrial strategy on both sides. This work examines where those complementarities are real, how European capital and Indian manufacturing capacity might be matched, and what trade and investment architecture would be needed to support it.</p>
+            <p>It sits alongside work on the trade measures that cut the other way. The EU’s Carbon Border Adjustment Mechanism, its revised steel safeguard quotas and India’s own Carbon Credit Trading Scheme interact in ways that reshape the economics for Indian exporters, and the firm-level exposure is uneven. Understanding who is affected, and how, is a precondition for sensible policy on either side.</p>
           </div>
           <div class="theme">
             <h3>Financing industrial decarbonisation</h3>
-            <p>Capital costs per tonne, firm-level investment data, and the financing gap between conventional blast furnaces and hydrogen-based steelmaking in India.</p>
+            <p>Heavy industry is where the transition is hardest to finance: assets are long-lived, margins are thin, and the low-carbon alternatives carry a capital cost premium that no single actor wants to absorb. This work quantifies that premium for Indian steel using capital costs per tonne and firm-level investment data, and traces the gap between conventional blast furnace routes and hydrogen-based steelmaking.</p>
+            <p>The questions extend beyond steel to aluminium, cement and the wider industrial base, and beyond India to other emerging markets facing the same problem. They also extend beyond the capital cost itself to what surrounds it: state support and its design, green public procurement and lead markets, carbon pricing, standards for low-carbon products, and the social contract around industrial communities whose jobs depend on these assets.</p>
             <div class="route" aria-label="Production routes compared"><span>BF-BOF</span>→<span>H₂-DRI-EAF</span></div>
           </div>
         </div>
@@ -418,6 +399,7 @@ footer a { color: var(--muted); }
 
     <!-- PUBLICATIONS -->
     <div class="view" id="v-publications" hidden>
+      <figure class="page-banner"><img src="media/nature/stone-bridge-river.jpg" alt="Stone bridge over a river, English countryside" loading="lazy"></figure>
       <section aria-labelledby="h-pubs">
         <h2 id="h-pubs">Publications</h2>
         <div class="pubs">
@@ -455,6 +437,7 @@ footer a { color: var(--muted); }
 
     <!-- OP-EDS AND ARTICLES -->
     <div class="view" id="v-writing" hidden>
+      <figure class="page-banner"><img src="media/nature/sunset-sea.jpg" alt="Sunset at sea" loading="lazy"></figure>
       <section aria-labelledby="h-opeds">
         <h2 id="h-opeds">Op-eds</h2>
         <p class="intro-note">Opinion pieces in newspapers and magazines.</p>
@@ -526,6 +509,7 @@ footer a { color: var(--muted); }
 
     <!-- AUDIO-VISUAL -->
     <div class="view" id="v-audiovisual" hidden>
+      <figure class="page-banner"><img src="media/nature/caribbean-beach.jpg" alt="Caribbean coast" loading="lazy"></figure>
       <section aria-labelledby="h-av">
         <h2 id="h-av">Audio-visual media</h2>
         <p class="intro-note">Radio, television and podcast appearances.</p>
@@ -544,6 +528,7 @@ footer a { color: var(--muted); }
 
     <!-- EVENTS -->
     <div class="view" id="v-events" hidden>
+      <figure class="page-banner"><img src="media/nature/pangong-lake.jpg" alt="Pangong Lake, Ladakh" loading="lazy"></figure>
       <section aria-labelledby="h-events">
         <h2 id="h-events">Events</h2>
         <article class="event">
